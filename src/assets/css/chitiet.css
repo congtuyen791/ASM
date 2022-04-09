@@ -18,11 +18,11 @@ main .top_ct{
 .left .box_anh{
     text-align: center;
     width: 600px;
-    height: 700px;
+    height: auto;
 }
 .left .box_anh img{
     width: 600px;
-    height: 700px;
+    height: auto;
 }
 .left .box_anh2{
     width: 100%;

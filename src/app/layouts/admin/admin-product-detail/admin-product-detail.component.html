@@ -34,20 +34,19 @@
 </style>
 <div class="box_ct">
     <div class="box_anh_ct">
-        <img src="/assets/img/iphone12.jpg" alt="">
+        <img [src]="product.image_url" alt="">
     </div>
     <div class="box_text_ct">
-        <p>ID sản phẩm: <strong>1</strong></p>
-        <h3>Tên sản phẩm: <strong>Iphone 12 pro max siêu ngon</strong></h3>
-        <p>Giá sản phẩm: <strong>24000000 <sup>đ</sup></strong></p>
-        <p>Màu sắc: <strong>Graphite</strong></p>
-        <p>Dung lượng lưu trữ: <strong>6-128GB</strong></p>
-        <p>Trạng thái: <strong>Còn hàng</strong></p>
+        <p>ID sản phẩm: <strong>{{product.id}}</strong></p>
+        <h3>Tên sản phẩm: <strong>{{product.name}}</strong></h3>
+        <p>Giá sản phẩm: <strong>{{product.price}} <sup>đ</sup></strong></p>
+        <p>Trạng thái: <strong *ngIf="product.status === 1">Còn hàng</strong>
+            <strong *ngIf="product?.status === 0">Hết hàng</strong></p>
         <h4>Mô tả:</h4>
-        <p>Màn hình Super Retina XDR 6.7 inch với ProMotion cho cảm giác nhanh nhạy hơn Chế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video Hệ thống camera chuyên nghiệp Telephoto, Wide và Ultra Wide 12MP; LiDAR Scanner; phạm vi thu phóng quang học 6x; chụp ảnh macro; Phong Cách Nhiếp Ảnh, video ProRes, HDR thông minh thế hệ 4, chế độ Ban Đêm, Apple ProRAW, khả năng quay video HDR Dolby Vision 4K Camera trước TrueDepth 12MP với chế độ Ban Đêm và khả năng quay video HDR Dolby Vision 4K Chip A15 Bionic cho hiệu năng thần tốc Thời gian xem video lên đến 28 giờ, thời lượng pin dài nhất từng có trên iPhone Thiết kế bền bỉ với Ceramic Shield Khả năng chống nước đạt chuẩn IP68 đứng đầu thị trường Mạng 5G cho tốc độ tải xuống siêu nhanh, xem video và nghe nhạc trực tuyến chất lượng cao iOS 15 tích hợp nhiều tính năng mới cho phép bạn làm được nhiều việc hơn bao giờ hết với iPhone</p>
+        <p>{{product.desc}}</p>
         
         <div class="btn_nut_ct">
-            <button routerLink="/admin/phones/edit/1">Sửa sản phẩm</button>&nbsp;&nbsp;
+            <button routerLink="/admin/phones/edit/{{product.id}}">Sửa sản phẩm</button>&nbsp;&nbsp;
             <button class="btn_2" routerLink="/admin/phones">Quay lại</button>
         </div>
     </div>

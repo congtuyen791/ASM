@@ -17,7 +17,12 @@ import { AdminProductComponent } from './layouts/admin/admin-product/admin-produ
 import { AdminProductFormComponent } from './layouts/admin/admin-product-form/admin-product-form.component';
 import { AdminHomeComponent } from './layouts/admin/admin-home/admin-home.component';
 import { AdminProductDetailComponent } from './layouts/admin/admin-product-detail/admin-product-detail.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './services/product.service';
+import { AdminStatusBtnComponent } from './layouts/admin/admin-status-btn/admin-status-btn.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { ShowErrorComponent } from './components/show-error/show-error.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,13 +39,18 @@ import { AdminProductDetailComponent } from './layouts/admin/admin-product-detai
     AdminProductComponent,
     AdminProductFormComponent,
     AdminHomeComponent,
-    AdminProductDetailComponent
+    AdminProductDetailComponent,
+    AdminStatusBtnComponent,
+    ShowErrorComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

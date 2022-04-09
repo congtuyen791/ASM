@@ -20,6 +20,9 @@ table tr th{
 table tr td{
     background: rgba(226, 226, 226, 0.582);
     height: 150px;
+} 
+tbody tr{
+    border-bottom: 1px solid #53595e8b;
 }
 h2{
     color: rgba(0, 0, 0, 0.664);

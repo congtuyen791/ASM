@@ -1,71 +1,35 @@
-<style>
-    select {
-        padding-left: 20px;
-        outline: none;
-    }
 
-    .form_btn {
-        width: 1000px;
-        height: 100px;
-        display: inline;
-    }
-
-    .form_btn button {
-        margin: 0 0 0 300px;
-    }
-
-    .form_btn>a {
-        padding: 13px 35px;
-        margin-left: 10px;
-        background: rgb(16, 165, 0);
-        border: 2px solid rgb(28, 60, 35);
-    }
-
-    .form_btn>a:hover {
-        border: 2px solid rgb(10, 97, 1);
-        background: #fff;
-        color: #000;
-        font-weight: 500;
-    }
-</style>
 <div class="right" id="them">
     <!-- <h2>Thêm sản phẩm</h2> -->
-    <form action="" id="form_them">
+    <p>{{productForm.value | json}}</p>
+    <form action=""  [formGroup]="productForm" (ngSubmit)="onSubmit(productForm.value)" >
         <div class="form_label">
             <label for="">Tên sản phẩm:</label>
-            <input type="text" name="name" id="name" autocomplete="off" placeholder="Tên sản phẩm...">
+            <div>
+            <input type="text" name="name" id="name" class="form-control" formControlName="name" autocomplete="off"
+                placeholder="Tên sản phẩm...">
+                <app-show-error [formField]="productForm.get('name')" key="Tên sản phẩm"></app-show-error>
+            </div>
         </div>
         <div class="form_label">
             <label for="">Ảnh sản phẩm:</label>
-            <input type="text" name="name" id="name" autocomplete="off" placeholder="link anh sản phẩm...">
+            <input type="text" name="image_url" id="image_url" class="form-control" formControlName="image_url" autocomplete="off"
+                placeholder="link anh sản phẩm...">
         </div>
         <div class="form_label">
             <label for="">Giá sản phẩm:</label>
-            <input type="number" name="gia" id="gia" autocomplete="off" placeholder="Giá sản phẩm....">
+            <input type="number" name="price" id="price" class="form-control" formControlName="price" autocomplete="off"
+                placeholder="Giá sản phẩm....">
         </div>
-        <div class="form_label">
-            <label for="">Màu sắc sản phẩm:</label>
-            <input type="text" name="mau_sac" id="mau_sac" autocomplete="off" placeholder="VD: Xanh, vàng, đỏ">
-        </div>
-        <div class="form_label">
-            <label for="">Dung lượng:</label>
-            <input type="text" name="mau_sac" id="mau_sac" autocomplete="off" placeholder="4-64GB, 4-128GB...">
-        </div>
-        <div class="form_label">
-            <label for="">Trạng thái sản phẩm:</label>
-            <select name="" id="">
-                <option value="1">Còn hàng</option>
-                <option value="0">Hết hàng</option>
-            </select>
-        </div>
+
         <div class="form_label">
             <label for="">Mô tả sản phẩm:</label>
-            <textarea name="mo_ta" id="mo_ta" cols="30" rows="10" autocomplete="off"
+            <textarea name="desc" id="desc" cols="30" class="form-control" formControlName="desc" rows="5" autocomplete="off"
                 placeholder="Nhập vào mô tả sản phẩm..."></textarea>
         </div>
-        <div class="form_btn">
-            <button type="button" routerLink="/admin/phones">Submit</button>
-            <a routerLink="/admin/phones">Quay lại</a>
+        <div class="form-group" style="padding-left: 25%;">
+            <button type="submit" class="btn btn-success m-3" [disabled]="productForm.invalid">Submit</button>
+            <a routerLink="/admin/phones" class="btn btn-danger">Quay lại</a>
         </div>
     </form><br><br>
 </div>

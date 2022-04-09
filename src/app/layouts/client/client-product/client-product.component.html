@@ -13,193 +13,21 @@
         </div>
     </div>
     <div class="san_pham_m">
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
+        <div class="box_sp" *ngFor="let p of product" id="idsp">
+            <div style="height: 330px;">
+                <img [src]="p.image_url" alt="">
+            </div><br>
+            <p class="ten_sp"><a routerLink="/phones/{{p.id}}">{{p.name}}</a></p>
             <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
+                <p class="gia_km">{{p.price}}<sup>đ</sup></p>
             </span>
             <div class="nut">
                 <div class="them">
                     <a href="#">Thêm vào giỏ hàng</a>
                 </div>
                 <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
+                    <a routerLink="/phones/{{p.id}}">Chi tiết</a>
 
-                </div>
-            </div>
-        </div>
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
-            <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
-            </span>
-            <div class="nut">
-                <div class="them">
-                    <a href="#">Thêm vào giỏ hàng</a>
-                </div>
-                <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
-
-                </div>
-            </div>
-        </div>
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
-            <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
-            </span>
-            <div class="nut">
-                <div class="them">
-                    <a href="#">Thêm vào giỏ hàng</a>
-                </div>
-                <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
-
-                </div>
-            </div>
-        </div>
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
-            <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
-            </span>
-            <div class="nut">
-                <div class="them">
-                    <a href="#">Thêm vào giỏ hàng</a>
-                </div>
-                <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
-
-                </div>
-            </div>
-        </div>
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
-            <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
-            </span>
-            <div class="nut">
-                <div class="them">
-                    <a href="#">Thêm vào giỏ hàng</a>
-                </div>
-                <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
-
-                </div>
-            </div>
-        </div>
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
-            <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
-            </span>
-            <div class="nut">
-                <div class="them">
-                    <a href="#">Thêm vào giỏ hàng</a>
-                </div>
-                <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
-
-                </div>
-            </div>
-        </div>
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
-            <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
-            </span>
-            <div class="nut">
-                <div class="them">
-                    <a href="#">Thêm vào giỏ hàng</a>
-                </div>
-                <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
-
-                </div>
-            </div>
-        </div>
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
-            <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
-            </span>
-            <div class="nut">
-                <div class="them">
-                    <a href="#">Thêm vào giỏ hàng</a>
-                </div>
-                <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
-                </div>
-            </div>
-        </div>
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
-            <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
-            </span>
-            <div class="nut">
-                <div class="them">
-                    <a href="#">Thêm vào giỏ hàng</a>
-                </div>
-                <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
-
-                </div>
-            </div>
-        </div>
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
-            <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
-            </span>
-            <div class="nut">
-                <div class="them">
-                    <a href="#">Thêm vào giỏ hàng</a>
-                </div>
-                <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
-
-                </div>
-            </div>
-        </div>
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
-            <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
-            </span>
-            <div class="nut">
-                <div class="them">
-                    <a href="#">Thêm vào giỏ hàng</a>
-                </div>
-                <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
-
-                </div>
-            </div>
-        </div>
-        <div class="box_sp" id="idsp">
-            <img src="/assets/img/iphone12.jpg" alt="">
-            <p class="ten_sp"><a routerLink="/phones/1">Iphone 12 pro max siêu ngon</a></p>
-            <span>
-                <p class="gia_km">24000000<sup>đ</sup></p>
-            </span>
-            <div class="nut">
-                <div class="them">
-                    <a href="#">Thêm vào giỏ hàng</a>
-                </div>
-                <div class="chi_tiet">
-                    <a routerLink="/phones/1">Chi tiết</a>
                 </div>
             </div>
         </div>

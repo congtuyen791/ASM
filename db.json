@@ -1,0 +1,44 @@
+{
+  "phones": [
+    {
+      "id": 1,
+      "name": "iphone 13 pro max",
+      "image_url": "https://hc.com.vn/i/ecommerce/media/GS.006091_FEATURE_71013.jpg",
+      "price": 24000000,
+      "status": 1,
+      "desc": "mo ta ai phone312312"
+    },
+    {
+      "name": "iphone 12 pro max",
+      "image_url": "https://cdn1.viettelstore.vn/images/Product/ProductImage/medium/iPhone-12-Mini-Whi-1.jpg",
+      "price": 24000000,
+      "status": 1,
+      "desc": "mo ta ai phonewqewqewq",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "iphone 11 pro max",
+      "desc": "mo ta ai phone",
+      "price": 24000000,
+      "image_url": "https://cdn.tgdd.vn/Products/Images/42/250257/iphone-13-blue-1-600x600.jpg",
+      "status": 1
+    },
+    {
+      "id": 4,
+      "name": "iphone 10 pro max",
+      "desc": "mo ta ai phone",
+      "price": 24000000,
+      "image_url": "https://cdn.tgdd.vn/Products/Images/42/274153/iphone-13-pro-max-xanh-la-thumb-600x600.jpg",
+      "status": 1
+    },
+    {
+      "id": 5,
+      "name": "qrewqrewq",
+      "image_url": "eqrewq",
+      "price": 2143214321,
+      "status": 1,
+      "desc": "213143214231"
+    }
+  ]
+}
