@@ -1,7 +1,7 @@
 
 <div class="right" id="them">
     <!-- <h2>Thêm sản phẩm</h2> -->
-    <p>{{productForm.value | json}}</p>
+    <!-- <p>{{productForm.value | json}}</p> -->
     <form action=""  [formGroup]="productForm" (ngSubmit)="onSubmit(productForm.value)" >
         <div class="form_label">
             <label for="">Tên sản phẩm:</label>
@@ -12,9 +12,9 @@
             </div>
         </div>
         <div class="form_label">
-            <label for="">Ảnh sản phẩm:</label>
-            <input type="text" name="image_url" id="image_url" class="form-control" formControlName="image_url" autocomplete="off"
-                placeholder="link anh sản phẩm...">
+            <label for="avatar">Avatar</label>
+            <input type="file" class="form-control" (change)="changeAvatar($event)" height="40">
+            <img [src]="avatarBase64" alt="" style="width: 200px; margin-left: 400px;">
         </div>
         <div class="form_label">
             <label for="">Giá sản phẩm:</label>
