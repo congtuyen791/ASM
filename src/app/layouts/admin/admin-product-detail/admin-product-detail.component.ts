@@ -19,7 +19,6 @@ export class AdminProductDetailComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.params['id'];
     console.log(this.id);
-    
     this.productService.getProduct(this.id).subscribe((data) => {
       this.product = data;
       console.log(data);

@@ -14,14 +14,14 @@ export class AdminProductComponent implements OnInit {
     this.onGetList();
   }
 
-  onGetList(){
+  onGetList() {
     this.productService.getProducts().subscribe((data) => {
       this.product = data;
       console.log(data);
-      
+
     })
   }
-  onDelete(id: number|string) {
+  onDelete(id: number | string) {
     this.productService.deleteProduct(id).subscribe((data) => {
       this.onGetList();
     });
@@ -33,10 +33,10 @@ export class AdminProductComponent implements OnInit {
       product.id,
       {
         ...product,
-      status: newStatus
-    }).subscribe((data) => {
-      this.onGetList();
-    })
+        status: newStatus
+      }).subscribe((data) => {
+        this.onGetList();
+      })
   }
 
 }

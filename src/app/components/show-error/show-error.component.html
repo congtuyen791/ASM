@@ -2,4 +2,5 @@
     <p *ngIf="formField.errors?.['required']">{{key}} bắt buộc nhập </p>
     <p *ngIf="formField.errors?.['minlength']">{{key}} tối thiểu 6 ký tự</p>
     <p *ngIf="formField.errors?.['maxlength']">{{key}} không quá 50 ký tự</p>
-</div><br><br><br>
+    <p *ngIf="formField.errors?.['maxlength']">{{key}} không quá 50 ký tự</p>
+</div>
