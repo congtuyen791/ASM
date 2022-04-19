@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 const apiUrl = 'http://localhost:3000/phones';
+const apiUrl2 = 'http://localhost:3000/phones?status=1';
+const apiUrl2L = 'http://localhost:3000/phones?_sort=name&_order=asc';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +18,13 @@ export class ProductService {
 
   getProduct(id: undefined | string) {
     return this.http.get(`${apiUrl}/${id}`);
+  }
+
+  getProducts2() {
+    return this.http.get(apiUrl2);
+  }
+  getProducts2L() {
+    return this.http.get(apiUrl2L);
   }
 
   deleteProduct(id: number | string) {

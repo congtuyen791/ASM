@@ -16,7 +16,14 @@ export class ClientProductComponent implements OnInit {
   }
 
   onGetList(){
-    this.productService.getProducts().subscribe((data) => {
+    this.productService.getProducts2().subscribe((data) => {
+      this.product = data;
+      console.log(data);
+      
+    })
+  }
+  onLoc(){
+    this.productService.getProducts2L().subscribe((data) => {
       this.product = data;
       console.log(data);
       

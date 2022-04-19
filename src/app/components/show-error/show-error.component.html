@@ -3,4 +3,6 @@
     <p *ngIf="formField.errors?.['minlength']">{{key}} tối thiểu 6 ký tự</p>
     <p *ngIf="formField.errors?.['maxlength']">{{key}} không quá 50 ký tự</p>
     <p *ngIf="formField.errors?.['maxlength']">{{key}} không quá 50 ký tự</p>
+    <p *ngIf="formField.errors?.['min']">{{key}} tối thiểu 10000 trở lên</p>
+    <p *ngIf="formField.errors?.['pattern']">{{key}} ko đúng định dạng url</p>
 </div>

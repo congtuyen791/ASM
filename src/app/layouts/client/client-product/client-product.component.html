@@ -2,9 +2,9 @@
     <div class="tieu_de">
         <h3>Tất cả sản phẩm</h3>
         <div class="loc">
-            <select name="" id="">
+            <select name="" id="" >
                 <option value="">Sắp xếp theo</option>
-                <option value="">Tên: A - Z</option>
+                <option value="" (click)="onLoc()">Tên: A - Z</option>
                 <option value="">Tên: Z - A</option>
                 <option value="">Mới nhất</option>
                 <option value="">Giá cao nhất</option>
@@ -27,7 +27,6 @@
                 </div>
                 <div class="chi_tiet">
                     <a routerLink="/phones/{{p.id}}">Chi tiết</a>
-
                 </div>
             </div>
         </div>

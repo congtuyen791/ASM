@@ -21,10 +21,10 @@ export class AdminProductFormComponent implements OnInit {
     this.productForm = new FormGroup({
       id: new FormControl(null),
       name: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(50)]),
-      image_url: new FormControl('',Validators.required),
-      price: new FormControl(0, [Validators.required]),
+      image_url: new FormControl('',[Validators.required, Validators.pattern('^(?:(?:http(?:s)?|ftp)://)(?:\\S+(?::(?:\\S)*)?@)?(?:(?:[a-z0-9\u00a1-\uffff](?:-)*)*(?:[a-z0-9\u00a1-\uffff])+)(?:\\.(?:[a-z0-9\u00a1-\uffff](?:-)*)*(?:[a-z0-9\u00a1-\uffff])+)*(?:\\.(?:[a-z0-9\u00a1-\uffff]){2,})(?::(?:\\d){2,5})?(?:/(?:\\S)*)?$')]),
+      price: new FormControl(0, [Validators.required, Validators.min(100000)]),
       status: new FormControl(1),
-      desc: new FormControl('', Validators.required)
+      desc: new FormControl('', [Validators.required, Validators.minLength(6)])
     })
   }
 
